@@ -1,0 +1,560 @@
+/* ------------------------------
+   BASE STYLES
+------------------------------ */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #161616, #0f0f0f);
+    color: #e5e5e5;
+  }
+  
+  a {
+    color: #4da0a9; /* accent color */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #68c2cb; /* slight variation on hover */
+    text-decoration: underline;
+  }
+  
+  /* ------------------------------
+     NAVIGATION
+  ------------------------------ */
+  nav {
+    position: sticky;
+    top: 0;
+    background: #222;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  }
+  
+  .nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e5e5e5;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 5px 8px;
+    border-radius: 2px;
+    transition: background 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    background: #333; /* subtle hover background */
+  }
+  
+  /* Hide the nav links on mobile by default (optional) */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* or transform: translateX(100%) for a sliding effect */
+    }
+    .menu-toggle {
+      display: block; /* hypothetical hamburger button */
+    }
+  }
+  
+  /* ------------------------------
+     HEADER / HERO
+  ------------------------------ */
+  header {
+    padding: 80px 20px;
+    text-align: center;
+    background: #1b1b1b;
+  }
+  
+  header .name {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  header .headline {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #bbb;
+  }
+  
+  header .location {
+    font-size: 1rem;
+    margin: 0;
+    color: #aaa;
+  }
+  
+  /* ------------------------------
+     SECTIONS / BASE LAYOUT
+  ------------------------------ */
+  section {
+    padding: 60px 20px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+    color: #e5e5e5; /* ensure heading text color is consistent */
+  }
+  
+  /* Paragraphs in sections */
+  section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Slightly reduce the padding on mobile */
+  @media (max-width: 600px) {
+    section {
+      padding: 40px 15px;
+    }
+  }
+  
+  /* ------------------------------
+     SKILLS & FAVORITES
+  ------------------------------ */
+  .skills-grid, .favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+  }
+  
+  .skills-grid div, .favorites-grid div {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.2s, background 0.3s;
+  }
+  
+  .skills-grid div:hover, .favorites-grid div:hover {
+    transform: translateY(-4px);
+    background: #2a2a2a;
+  }
+  
+  .skills-grid h3, .favorites-grid h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+  }
+  
+  /* ------------------------------
+     LIST STYLES
+  ------------------------------ */
+  ul, ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  /* Multi-column lists for Travel, etc. */
+  .multi-column-list {
+    columns: 3;
+    column-gap: 20px;
+    list-style-type: disc;
+  }
+  
+  .multi-column-list li {
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive: single column on small screens */
+  @media (max-width: 600px) {
+    .multi-column-list {
+      columns: 1;
+    }
+  }
+  
+  /* ------------------------------
+     EXPERIENCE & EDUCATION
+  ------------------------------ */
+  .experience-block, .education-block {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* spacing between blocks */
+  }
+  
+  .experience-block h3, .education-block strong {
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 700;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+  }
+  
+  /* Optional timeline style for .experience-block */
+  .experience-block {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid #444;
+  }
+  
+  .experience-block::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background: #4da0a9; /* teal accent for the timeline dot */
+    border-radius: 50%;
+  }
+  
+  /* ------------------------------
+     FOOTER
+  ------------------------------ */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    position: relative;
+  }
+  
+  .back-to-top {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.2rem;
+    color: #e5e5e5;
+    background: #333;
+    padding: 5px 8px;
+    border-radius: 3px;
+    transition: background 0.3s;
+  }
+  
+  .back-to-top:hover {
+    background: #444;
+  }
+  
+  /* ------------------------------
+     INSTAGRAM SLIDER
+  ------------------------------ */
+  .instagram-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .slider-container {
+    overflow: hidden;
+    width: 80%;
+    max-width: 700px; 
+    position: relative;
+  }
+  
+  .slider-track {
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+  
+  .slide {
+    min-width: 320px; 
+    margin: 0 10px;
+    flex-shrink: 0;
+  }
+  
+  .slide blockquote {
+    margin: 0;
+    max-width: 100%;
+  }
+  
+  /* Arrows (Prev / Next) */
+  .slider-arrow {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 0 5px;
+    transition: background 0.3s;
+  }
+  
+  .slider-arrow:hover {
+    background: #444;
+  }
+  
+  /* Responsive slider adjustments */
+  @media (max-width: 768px) {
+    .slider-container {
+      width: 90%; 
+    }
+    .slide {
+      min-width: 280px;
+    }
+  }
+  
+  /* ------------------------------
+     STEAM LINK BUTTON
+  ------------------------------ */
+  .steam-link-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  .steam-link-btn:hover {
+    background: #444;
+  }
+  
+  /* ------------------------------
+     MUSIC CORNER
+  ------------------------------ */
+  #music-corner .container {
+    text-align: left;
+  }
+  
+  .music-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #252525, #333);
+    padding: 15px 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    gap: 12px;
+  }
+  
+  .music-btn {
+    background: #444;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s, transform 0.2s;
+    max-width: 270px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+  
+  .music-btn:hover {
+    background: #666;
+    transform: translateY(-2px);
+  }
+  
+  #song-label {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 180px;
+  }
+  
+  #song-counter {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  #favorite-line {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    color: #d1d1d1;
+    white-space: pre-line;
+  }
+  
+  /* ------------------------------
+     BLOG SECTION
+  ------------------------------ */
+  #blog {
+    /* same basic layout as other sections */
+  }
+  
+  .blog-placeholder {
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .blog-placeholder:hover {
+    background: #2a2a2a;
+    transform: translateY(-4px);
+  }
+  
+  .coming-soon {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #4da0a9; /* use the same teal accent */
+  }
+  
+  /* ------------------------------
+     COLLAPSIBLE CONTENT
+  ------------------------------ */
+  .collapsible-content {
+    display: none; /* hidden by default */
+  }
+  
+  .collapsible-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 14px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+  }
+  
+  .collapsible-btn:hover {
+    background-color: #444;
+  }
+  
+  /* ------------------------------
+     COMPILER PASS DEMO
+  ------------------------------ */
+  .collapsible {
+    /* by default hidden, plus the fade/translate for reveal */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .collapsible.show-section {
+    /* expanded state */
+    max-height: 1000px; /* large enough to accommodate content */
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* A simple button style for toggles */
+  .collapse-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s;
+  }
+  .collapse-btn:hover {
+    background: #444;
+  }
+  
+  .intro-text {
+    margin-bottom: 1rem;
+  }
+  
+  /* Keep your existing pass-controls styling */
+  .pass-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .pass-controls button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .pass-controls button:hover {
+    background: #444;
+  }
+  .pass-controls button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  /* Jump/search bar styling */
+  .pass-jump-search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .pass-jump-search input {
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+  }
+  .pass-jump-search button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .pass-jump-search button:hover {
+    background: #444;
+  }
+  .pass-jump-search button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .pass-info {
+    margin-bottom: 10px;
+  }
+  
+  pre.ir-code-block {
+    background: #1f1f1f;
+    color: #e5e5e5;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    max-height: 400px;
+    margin-bottom: 2rem;
+  }
+  
+  /* (Optional) tweak the container if needed */
+  /*.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }*/

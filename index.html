@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Ahmad Tameem - Compiler Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.20.0" />
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+    <!-- Instagram Embed JS -->
+    <script async src="//www.instagram.com/embed.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">A.T.</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#travel">Travel</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            <h1 class="name">Ahmad Tameem</h1>
+            <h2 class="headline">Compiler Engineer</h2>
+            <p class="location">Lahore, Pakistan</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I'm a compiler engineer with a passion for transforming code into efficient machine instructions. 
+                I enjoy writing complex code, optimizing performance, and ....
+            </p>
+            <p>
+                When I'm not wrestling with code, you'll find me reading books, traveling, and playing video games to unwind.
+            </p>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="container">
+            <h2>What I Do</h2>
+            <p>
+                I work on programming language front-ends (including PyTorch), build compilation flows, and optimize kernels for compilers. 
+                Right now, I'm zeroed in on making ML compilers more cost-effective and streamlined Large Language Models (LLMs) for edge devices. 
+                <a href="https://www.linkedin.com/in/ahmad-tameem" target="_blank">Read more on LinkedIn!</a>
+            </p>    
+        </div>
+    </section>
+
+    <section id="iree-compiler-demo">
+      <div class="container">
+    
+        <!-- Collapsible toggle button + short text -->
+        <h2>Compiler Pass Demo</h2>
+        <p class="intro-text">
+          This section is not Completed Yet!... Let's take a very simple matmul code and pass it through the IREE (ML Compiler). 
+          It applies many transformations on the input code, each pass is applied on specific region and the flows continue. 
+          It's just a 5 MB file for just 2 line of code and usually the programmer is unaware of effort and time it take to 
+          optimize the code, and also now imagine for actual application we got 500 MB dumps to analyze and it's just for IREE part,
+          after this for backend LLVM compiler comes in for it's part! (I did not added LLVM IR Dump in it, it just IREE IR dump)<br><br>
+          <strong>Demo</strong>
+        </p>
+        <button id="toggle-demo-btn" class="collapse-btn">Show Demo</button>
+    
+        <!-- Collapsible container for the main demo -->
+        <div id="demo-content" class="collapsible hidden-section">
+              
+          <!-- Control Buttons -->
+          <div class="pass-controls">
+            <button id="load-btn">Load Demo</button>
+            <button id="prev-pass-btn" disabled>Previous Pass</button>
+            <button id="play-btn" disabled>Play</button>
+            <button id="next-pass-btn" disabled>Next Pass</button>
+            <!-- NEW: Additional controls -->
+            <button id="reset-btn" disabled>Reset</button>
+          </div>
+    
+          <!-- Jump to pass # / search pass name -->
+          <div class="pass-jump-search">
+            <input type="number" id="pass-number" placeholder="Go to pass # (e.g. 5)" min="1" style="width:120px;">
+            <button id="go-pass-btn" disabled>Go</button>
+            
+            <input type="text" id="search-pass" placeholder="Search pass name" style="width:150px;">
+            <button id="search-btn" disabled>Search</button>
+          </div>
+    
+          <!-- Info about which pass is being shown -->
+          <div class="pass-info">
+            <strong>Current Pass:</strong> <span id="pass-title"></span>
+            <br>
+            <strong>Progress:</strong> <span id="pass-progress"></span>
+          </div>
+    
+          <!-- IR code block -->
+          <pre id="ir-dump" class="ir-code-block"></pre>
+    
+          <!-- "Read more details" collapsible AFTER the demo -->
+          <button id="toggle-more-btn" class="collapse-btn">Read More Details</button>
+          <div id="more-details" class="collapsible hidden-section">
+            <p>
+              TODO: Add details......<br>
+              TODO:
+              Some passes may repeat because they are reapplied after a specific pass. 
+              Passes here are transformations (optimizations) applied on the input code.
+            </p>
+          </div>
+    
+        </div> <!-- end #demo-content -->
+    
+      </div>
+    </section>        
+    
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <p>Thinking of removing this section, that must be remain on LinkedIn, but here's a sneak peek anyway....!</p>
+            <div class="skills-grid">
+                <div>
+                    <h3>Core Technologies</h3>
+                    <ul>
+                        <li>IREE</li>
+                        <li>LLVM</li>
+                        <li>LLM</li>
+                        <li>SIMD</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Spoken Languages</h3>
+                    <ul>
+                        <li>Urdu (Native)</li>
+                        <li>English (Full Professional)</li>
+                        <li>Arabic (Limited Working)</li>
+                        <li>Korean (Elementary)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="travel">
+      <div class="container">
+        <h2>Travel</h2>
+        <p>
+          Pakistan is a treasure trove of breathtaking landscapes, and I've been fortunate enough 
+          to explore a variety of them, and still nowhere near done yet! But some highlights so far:
+        </p>
+    
+        <!-- NEW BUTTON -->
+        <button id="toggleTravelBtn" class="collapsible-btn">Show Places</button>
+        
+        <!-- WRAPPED LIST IN A DIV -->
+        <div id="travelList" class="collapsible-content">
+          <ul class="multi-column-list">
+            <li>Hunza</li>
+            <li>Islamabad</li>
+            <li>Fairy Meadows (Nanga Parbat)</li>
+            <li>Passu Cones</li>
+            <li>Naltar Valley</li>
+            <li>Khunjerab Pass</li>
+            <li>Naran</li>
+            <li>Miranjani & Mushkpuri Peak</li>
+            <li>Shakargarh</li>
+            <li>Sialkot</li>
+            <li>Narowal</li>
+            <li>Jhelum</li>
+            <li>Mirpur</li>
+            <li>Kotli</li>
+            <li>Nathia Gali</li>
+            <li>Murree</li>
+            <li>Gujrat</li>
+            <li>Gujranwala</li>
+            <li>Balakot</li>
+            <li>Lulusar Lake</li>
+            <li>Babusar Top</li>
+            <li>Husseni Suspension Bridge</li>
+            <li>Sost</li>
+            <li>Three Junction Point</li>
+            <li>Hopper Valley</li>
+            <li>Abbottabad</li>
+            <li>Ayubia National Park</li>
+            <li>Attabad Lake</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="games">
+        <div class="container">
+            <h2>Games</h2>
+            <p>I enjoy action-adventure and role-playing games. Some favorites:</p>
+            <ol>
+                <li>Portal 2</li>
+                <li>Fallout: New Vegas</li>
+                <li>Half-Life 2</li>
+                <li>Control</li>
+                <li>Need for Speed: Heat</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="favorites">
+        <div class="container">
+            <h2>Favorites</h2>
+            <div class="favorites-grid">
+                <div>
+                    <h3>Book/Movie Genres</h3>
+                    <ul>
+                        <li>Sci-Fi</li>
+                        <li>Mystery</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Books</h3>
+                    <ul>
+                        <li>The Three-Body Problem</li>
+                        <li>The Hitchhiker's Guide to the Galaxy</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Music Bands</h3>
+                    <ul>
+                        <li>Coldplay</li>
+                        <li>Imagine Dragons</li>
+                        <li>The Naked and Famous</li>
+                        <li>Chvrches</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Movies</h3>
+                    <ul>
+                        <li>Inception</li>
+                        <li>Mirage (2018)</li>
+                        <li>I Don't Feel at Home in This World Anymore</li>
+                        <li>Top Gun: Maverick</li>
+                        <li>Hobbs and Shaw</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-block">
+                <h3>Compiler Engineer at 10xEngineers</h3>
+                <p><em>December 2022 - Present | Lahore, Pakistan</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-block">
+                <strong>National University of Computer and Emerging Sciences</strong>
+                <p>
+                    Bachelor's in Electrical Engineering (Computer Engineering Specialization)<br>
+                    2018 - 2022
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Questions? Ideas? Random thoughts? I'm all ears...Feel free to reach out!</p>
+            <p>Email: <a href="mailto:ahmad.tameem97@gmail.com">ahmad.tameem97@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmadtameem" target="_blank">/in/ahmadtameem</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/ahmad.tameem97" target="_blank">@ahmad.tameem97</a></p>
+        </div>
+    </section>
+
+<!-- BLOG SECTION: Coming Soon placeholder -->
+<section id="blog">
+    <div class="container">
+      <h2>Blog</h2>
+      <div class="blog-placeholder">
+        <p class="coming-soon">Coming Soon</p>
+        <p>I'm working on some interesting topics to share—stay tuned (Still unable to grab time for these...)!</p>
+      </div>
+    </div>
+  </section>
+      
+    
+<!-- NEW SECTION: Instagram Embeds -->
+<section id="instagram">
+    <div class="container">
+      <h2>Instagram Feed</h2>
+      <p>Finally, decided to hop on social media! (No, LinkedIn doesn't count...)</p>
+      <!-- <p>Check out my latest Instagram posts—but please don't share them—I'm still an introvert, after all! </p>  -->
+      <div class="instagram-slider">
+        <!-- Left arrow -->
+        <button id="prevBtn" class="slider-arrow">&laquo;</button>
+  
+        <div class="slider-container">
+          <div class="slider-track">
+            
+            <!-- Slide #1 -->
+            <div class="slide">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DBbJORzMji7/"
+                data-instgrm-version="14">
+              </blockquote>
+            </div>
+  
+            <!-- Slide #2 -->
+            <div class="slide">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DBbLQQls4Jt/"
+                data-instgrm-version="14">
+              </blockquote>
+            </div>
+  
+            <!-- Slide #3 -->
+            <div class="slide">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DDK8Ykpshef/"
+                data-instgrm-version="14">
+              </blockquote>
+            </div>
+  
+            <!-- Add more .slide blocks if you have additional IG posts -->
+            
+          </div> <!-- end .slider-track -->
+        </div> <!-- end .slider-container -->
+  
+        <!-- Right arrow -->
+        <button id="nextBtn" class="slider-arrow">&raquo;</button>
+      </div> <!-- end .instagram-slider -->
+    </div> <!-- end .container -->
+  </section>
+               
+
+    <!-- NEW SECTION: Steam Embed (blurred until expanded) -->
+    <section id="steam">
+        <div class="container">
+          <h2>My Steam Page</h2>
+          <p>Take a peek at my Steam profile!</p>
+          <a href="https://steamcommunity.com/id/ahmad_tameem/" target="_blank" class="steam-link-btn">
+            Visit My Steam Profile
+          </a>
+        </div>
+      </section>      
+
+    <!-- Music Corner Section -->
+    <section id="music-corner">
+        <div class="container">
+          <h2>Music Corner</h2>
+          <p>Enjoy a random song from my playlist!</p>
+          <p>Sadly, YouTube Music embedding isn't a thing yet. Please click the button below to open song in a new tab. Sorry for the extra click!</p>
+      
+          <div class="music-bar">
+            <!-- A button for playing the song -->
+            <button id="song-btn" class="music-btn">
+              <!-- Optionally a label inside, or you can just set text directly on the button itself -->
+              <span id="song-label">Song Title</span>
+            </button>
+      
+            <!-- A button for next song -->
+            <button id="next-btn" class="music-btn">Next</button>
+          </div>
+      
+          <!-- The favorite line goes here -->
+          <div id="favorite-line"></div>
+        </div>
+      </section>
+            
+          
+      
+    <footer>
+        <p>&copy; 2024 Ahmad Tameem</p>
+        <a href="#home" class="back-to-top" title="Back to Top">&#8679;</a>
+    </footer>
+   
+    <script src="script.js?v=1.20.0"></script>
+
+</body>
+</html>
